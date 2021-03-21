@@ -9,7 +9,7 @@
   --color-darkgray: rgb(82, 82, 82);
 
   /* Font size */
-  --font-size-small: 15px;
+  --font-size-small: 13px;
   --font-size-medium: 20px;
   --font-size-mediumLarge: 30px;
   --font-size-large: 40px;
@@ -437,10 +437,102 @@ ul {
 }
 
 /* Pricing Tables */
+
 .pricing-tables {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   width: 100%;
   height: 900px;
   background-color: var(--purple-section);
+}
+
+.pricing-tables .title__description {
+  text-align: center;
+  height: 150px;
+  margin-bottom: 40px;
+}
+
+.pricing-tables .title__description p {
+  margin-top: 30px;
+}
+
+.pricing-table-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 92%;
+  height: 500px;
+}
+
+.pricing-table {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 31.5%;
+  height: 101%;
+  border-radius: 17px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+  background-color: var(--white-background);
+}
+
+.pricing-table h2 {
+  padding-bottom: 30px;
+  font-size: var(--font-size-medium);
+}
+
+.pricing-table ul {
+  margin: 20px 0;
+  text-align: center;
+  color: var(--color-gray);
+  font-size: var(--font-size-small);
+}
+
+.pricing-table li {
+  padding: 10px 0;
+}
+
+li.cancel {
+  text-decoration: line-through;
+}
+
+.pricing-table a {
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  background-color: var(--purple-background);
+  color: white;
+  font-size: var(--font-size-small);
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  transition: all 250ms ease-out;
+}
+
+.pricing-table a:hover {
+  background-color: var(--pink-background);
+}
+
+.monthly-box {
+  text-align: center;
+  padding: 30px 0 20px 0;
+  width: 80%;
+  border-radius: 20px;
+  color: var(--white-background);
+}
+
+.pricing-table:nth-child(even) .monthly-box {
+  background-color: var(--pink-background);
+}
+
+.pricing-table:nth-child(odd) .monthly-box {
+  background-color: var(--purple-background);
+}
+
+.monthly-box h1 {
+  margin-bottom: 10px;
+  font-size: var(--font-size-mediumLarge);
 }
 
 /* Responsible web */
