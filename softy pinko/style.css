@@ -694,7 +694,7 @@ li.cancel {
 
 .contact-box {
   display: flex;
-  width: 100%;
+  width: 80%;
   margin: auto;
   justify-content: space-between;
 }
@@ -727,7 +727,7 @@ li.cancel {
 
 .input {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-evenly;
 }
 
 #input-name,
@@ -737,7 +737,6 @@ li.cancel {
   font-size: var(--font-size-small);
   outline: none;
   resize: none;
-  margin: 15px;
   border-radius: 25px;
   transition: all 250ms ease-out;
 }
@@ -752,24 +751,29 @@ li.cancel {
 #input-name,
 #input-email {
   padding: 5px 15px 5px 15px;
-  margin-left: auto;
-  margin-right: auto;
   display: inline-block;
-  width: 43%;
+  width: 45%;
   height: 40px;
+}
+
+#input-name {
+  margin-right: 15px;
+}
+
+#input-email {
+  margin-left: 15px;
 }
 
 #msg {
   font-family: 'Malgun Gothic';
+  margin: 30px 0 30px 0;
   padding: 20px;
-  width: 91%;
+  width: 95%;
   height: 100px;
 }
 
 .contact-form .purple-btn {
   cursor: pointer;
-  margin-left: 15px;
-  margin-top: 15px;
   width: 140px;
   height: 45px;
 }
@@ -813,6 +817,7 @@ footer p {
   text-align: center;
   color: var(--white-background);
   font-size: var(--font-size-small);
+  letter-spacing: 0.3px;
 }
 
 /* Responsible web */
