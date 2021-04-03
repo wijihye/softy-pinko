@@ -25,6 +25,10 @@
   --radius: 20px;
 }
 
+* {
+  outline: none;
+}
+
 ::selection {
   /* 모든 텍스트 및 이미지등이 마우스 포인터에 
   의해 선택됐을 때 */
@@ -38,6 +42,13 @@ a {
 
 ul {
   list-style: none;
+}
+
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* .font-weight-heavy */
@@ -107,13 +118,15 @@ ul {
   background-color: var(--white-background);
   box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
   border-radius: calc(var(--radius) * 2);
-  padding: 1.7em 0 1.7em 0;
+  padding: 25px 0 25px 0;
   display: flex;
   position: fixed;
   right: 3%;
   left: 3%;
   justify-content: center;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 100;
   max-width: 1140px;
 }
@@ -142,7 +155,7 @@ ul {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
   line-height: 30px;
-  transition: all 250ms linear;
+  transition: color 250ms linear;
 }
 
 .nav__item:hover {
@@ -213,7 +226,7 @@ ul {
   margin: -220px 4% 0 4%;
   z-index: 3;
   width: inherit;
-  height: 300px;
+  /* height: 300px; */
 }
 
 .home__description__content {
@@ -225,6 +238,7 @@ ul {
   box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
   padding: 30px;
   cursor: pointer;
+  max-width: 370px;
 }
 
 .home__description__content:hover .description__image {
@@ -268,7 +282,6 @@ ul {
   position: relative;
   margin-top: 40px;
   width: 100%;
-  height: 841px;
 }
 
 .about-discuss {
@@ -278,9 +291,15 @@ ul {
 .about-discuss,
 .about-business {
   display: flex;
-  margin: 8% auto 0px auto;
+  padding: 80px 0;
+  margin: 0 auto;
   width: 80%;
-  height: 400px;
+}
+
+.about-discuss img,
+.about-business img {
+  width: 350px;
+  height: 350px;
 }
 
 .about .title__description {
@@ -288,11 +307,11 @@ ul {
 }
 
 .about .title__description:nth-child(even) {
-  margin-left: 15%;
+  margin-left: 27%;
 }
 
 .about .title__description:nth-child(odd) {
-  margin-right: 15%;
+  margin-right: 27%;
 }
 
 /* Work Process */
@@ -306,7 +325,6 @@ ul {
   align-items: center;
   margin-top: 100px;
   width: 100%;
-  height: 590px;
 }
 
 .work-process::before {
@@ -324,7 +342,6 @@ ul {
 
 .work-process .title__description {
   padding-bottom: 20px;
-  width: 48%;
   height: 100px;
 }
 
@@ -354,9 +371,9 @@ ul {
 
 .work-process__items {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 60px;
-  width: 93%;
 }
 
 .work-process__item a {
@@ -377,10 +394,11 @@ ul {
   align-items: center;
   background-color: var(--white-background);
   border-radius: var(--radius);
-  width: 14.5%;
   height: 190px;
   box-shadow: 10px 10px 0px rgb(255 255 255 / 10%);
   transition: all 250ms ease-out;
+  margin: 10px;
+  padding: 5px;
 }
 
 .work-process__item:hover {
@@ -394,13 +412,14 @@ ul {
   flex-flow: column;
   justify-content: center;
   width: 100%;
-  height: 680px;
   background-color: var(--white-background);
+  margin: auto;
+  max-width: 1200px;
 }
 
 .testimonials .title__description {
   margin: 0 auto;
-  width: 42%;
+  width: 50%;
   height: 150px;
   text-align: center;
 }
@@ -412,10 +431,9 @@ ul {
 
 .testimonial__cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 20px auto;
-  width: 91%;
-  height: 300px;
 }
 
 .testimonial__card {
@@ -423,8 +441,9 @@ ul {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 31.5%;
-  height: 100%;
+  width: 350px;
+  padding: 20px 0 20px 0;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 0 0 50px rgb(0 0 0 / 10%);
 }
@@ -478,7 +497,6 @@ ul {
   flex-flow: column;
   justify-content: center;
   width: 100%;
-  height: 900px;
   background-color: var(--purple-section);
 }
 
@@ -494,10 +512,9 @@ ul {
 
 .pricing-table-box {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
-  width: 92%;
-  height: 500px;
 }
 
 .pricing-table {
@@ -505,8 +522,9 @@ ul {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 31.5%;
-  height: 101%;
+  width: 300px;
+  margin: 10px;
+  padding: 30px;
   border-radius: 17px;
   box-shadow: 0 0 50px rgb(0 0 0 / 10%);
   background-color: var(--white-background);
@@ -616,7 +634,6 @@ li.cancel {
   flex-flow: column;
   align-items: center;
   width: 100%;
-  height: 790px;
   text-align: center;
 }
 
@@ -635,15 +652,15 @@ li.cancel {
 .entry-box {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 98%;
-  height: 450px;
 }
 
 .entry {
   text-align: center;
   padding-left: 20px;
-  width: 31%;
-  height: 100%;
+  margin: 20px 30px 20px 30px;
+  width: 330px;
 }
 
 .entry .blog-img {
@@ -651,6 +668,7 @@ li.cancel {
   border-radius: var(--radius);
   width: 350px;
   height: 200px;
+  margin: auto;
 }
 
 .entry .description {
@@ -704,6 +722,7 @@ li.cancel {
   width: 80%;
   margin: auto;
   justify-content: space-between;
+  max-width: 1150px;
 }
 
 .contact-box .description {
@@ -834,10 +853,58 @@ footer p {
 }
 
 /* Responsible web */
+/* 1200px 이상 */
 
-@media (min-width: 1200px) {
-  .nav {
-    margin-right: auto;
-    margin-left: auto;
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .testimonials .title__description {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .testimonials .title__description {
+    height: 200px;
+  }
+
+  .about {
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__item {
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  .about-discuss img,
+  .about-business img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .pricing-table-box {
+    max-width: 1200px;
+  }
+
+  .pricing-table {
+    width: 300px;
+    margin: 10px;
   }
 }
