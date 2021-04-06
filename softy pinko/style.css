@@ -124,8 +124,8 @@ ul {
   display: block;
   margin-right: 3%;
   position: relative;
-  width: 40px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
   cursor: pointer;
 }
 
@@ -133,14 +133,15 @@ ul {
   display: block;
   position: absolute;
   width: 100%;
-  height: 5px;
-  background-color: rgb(233, 233, 233);
+  height: 2px;
+  background-color: rgb(63, 63, 63);
   border-radius: 10px;
   transition: all 250ms ease-in;
 }
 
 #menuicon + label span:nth-child(1) {
   top: 0;
+  width: 70%;
 }
 
 #menuicon + label span:nth-child(2) {
@@ -150,11 +151,13 @@ ul {
 
 #menuicon + label span:nth-child(3) {
   bottom: 0;
+  width: 60%;
 }
 
 #menuicon:checked + label span:nth-child(1) {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
+  width: 100%;
 }
 
 #menuicon:checked + label span:nth-child(2) {
@@ -164,6 +167,7 @@ ul {
 #menuicon:checked + label span:nth-child(3) {
   bottom: 50%;
   transform: translateY(50%) rotate(-45deg);
+  width: 100%;
 }
 
 /* Navbar */
@@ -183,21 +187,58 @@ ul {
   margin-right: auto;
   z-index: 100;
   max-width: 1140px;
+  overflow: hidden;
 }
 
 .logo {
-  display: flex;
+  display: block;
+  position: relative;
+  width: 160px;
+  height: 30px;
   margin: 0 auto 0 3%;
   justify-content: left;
+}
+
+.menuicon-div {
+  position: fixed;
+  top: 6.5%;
+  right: 13%;
 }
 
 .nav__content {
   display: flex;
   padding-left: 0.5em;
+  transition: all 300ms ease-out;
+}
+
+.nav__content.clicked {
+  text-align: center;
+  padding-left: 0;
+  margin-top: 30px;
+  height: 100%;
+}
+
+.nav__content.clicked li {
+  width: 100%;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+.nav__content.clicked li:nth-child(7) {
+  border-bottom: none;
+  padding: 0;
+}
+
+.nav__content.clicked li a {
+  display: block;
+  line-height: 50px;
+}
+
+.nav__content.clicked li:hover {
+  background-color: rgb(0 0 0 / 10%);
 }
 
 .nav__content li {
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
 }
 
 .nav__content li:nth-child(7) {
@@ -910,12 +951,44 @@ footer p {
   letter-spacing: 0.3px;
 }
 
+/* Animation */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 /* Responsible web */
 
 @media screen and (min-width: 576px) {
+  #navbar {
+    width: 80%;
+    display: block;
+  }
+
+  .logo {
+  }
+
   .nav__content {
     flex-flow: column;
     display: none;
+  }
+
+  .nav__content.clicked li {
+    padding: 0;
   }
 
   #menuicon + label {
@@ -1064,8 +1137,13 @@ footer p {
 /* 768px ~ 991px */
 
 @media screen and (min-width: 992px) {
-  .nav__content {
+  #navbar {
+    width: inherit;
     display: flex;
+  }
+
+  .nav__content {
+    display: flex !important;
     flex-flow: row;
     margin-right: 5%;
   }
