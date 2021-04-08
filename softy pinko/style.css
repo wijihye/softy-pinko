@@ -111,63 +111,9 @@ ul {
   background-color: var(--pink-background);
 }
 
-/* menu-icon */
+/* Preloader */
 
-#menuicon {
-  display: none;
-  width: 40px;
-  height: 40px;
-  text-decoration: none;
-}
-
-#menuicon + label {
-  display: block;
-  margin-right: 3%;
-  position: relative;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-}
-
-#menuicon + label span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: rgb(63, 63, 63);
-  border-radius: 10px;
-  transition: all 250ms ease-in;
-}
-
-#menuicon + label span:nth-child(1) {
-  top: 0;
-  width: 70%;
-}
-
-#menuicon + label span:nth-child(2) {
-  bottom: 50%;
-  transform: translateY(50%);
-}
-
-#menuicon + label span:nth-child(3) {
-  bottom: 0;
-  width: 60%;
-}
-
-#menuicon:checked + label span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  width: 100%;
-}
-
-#menuicon:checked + label span:nth-child(2) {
-  opacity: 0;
-}
-
-#menuicon:checked + label span:nth-child(3) {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-45deg);
-  width: 100%;
+.loader {
 }
 
 /* Navbar */
@@ -261,6 +207,65 @@ ul {
   color: var(--pink-background);
 }
 
+/* menu-icon */
+
+#menuicon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+#menuicon + label {
+  display: block;
+  margin-right: 3%;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#menuicon + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 10px;
+  transition: all 250ms ease-in;
+}
+
+#menuicon + label span:nth-child(1) {
+  top: 0;
+  width: 70%;
+}
+
+#menuicon + label span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+#menuicon + label span:nth-child(3) {
+  bottom: 0;
+  width: 60%;
+}
+
+#menuicon:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 100%;
+}
+
+#menuicon:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+#menuicon:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+  width: 100%;
+}
+
 /* Home */
 
 .home__title {
@@ -317,7 +322,6 @@ ul {
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  justify-content: center;
   text-align: center;
   margin: -220px 4% 0 4%;
   z-index: 3;
@@ -326,8 +330,7 @@ ul {
 
 .home__description__content {
   margin: 30px 20px 30px 20px;
-  width: 26%;
-  height: 72%;
+  height: 80%;
   background-color: var(--white-background);
   border-radius: 15px;
   box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
@@ -369,6 +372,8 @@ ul {
   font-weight: var(--font-weight-light);
   color: var(--color-gray);
   line-height: 25px;
+  width: 90%;
+  margin: auto;
 }
 
 /* About */
@@ -973,13 +978,10 @@ footer p {
 
 /* Responsible web */
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 500px) {
   #navbar {
     width: 80%;
     display: block;
-  }
-
-  .logo {
   }
 
   .nav__content {
@@ -999,10 +1001,20 @@ footer p {
     max-width: 540px;
   }
 
+  .home__title__content h1 {
+    font-size: var(--font-size-mediumLarge);
+  }
+
+  .home__title__content p {
+    font-size: var(--font-size-small);
+  }
+
+  .home__description {
+    margin-top: 0;
+  }
+
   .home__description__content {
-    width: inherit;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: 30px auto;
   }
 
   .about-discuss,
@@ -1073,7 +1085,9 @@ footer p {
   }
 
   .home__description__content {
-    width: 300px;
+    max-width: 33.3333%;
+    margin: 30px 3rem;
+    margin-right: auto;
   }
 
   .testimonial__card {
@@ -1160,8 +1174,24 @@ footer p {
     max-width: 960px;
   }
 
+  .home__description {
+    margin: -220px auto 0 auto;
+    justify-content: center;
+    max-width: 960px;
+  }
+
+  .home__title__content h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .home__title__content p {
+    font-size: var(--font-size-smallMedium);
+  }
+
   .home__description__content {
-    width: 250px;
+    max-width: 400px;
+    margin: 30px auto;
+    width: 25%;
   }
 
   .about-discuss,
@@ -1190,8 +1220,8 @@ footer p {
     max-width: 1140px;
   }
 
-  .home__description__content {
-    max-width: 360px;
+  .home__description {
+    max-width: 1140px;
   }
 
   .about-discuss img,
