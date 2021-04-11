@@ -44,9 +44,12 @@ ul {
   list-style: none;
 }
 
+section:not(.contact-us, .home__title, .home__description, #about, .blog-entries) {
+  padding: 40px 0;
+}
+
 .container {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 100px 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -114,6 +117,12 @@ ul {
 /* Preloader */
 
 .loader {
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+  transition: background 350ms ease-in-out;
 }
 
 /* Navbar */
@@ -443,6 +452,7 @@ ul {
 .work-process .title__description {
   padding-bottom: 20px;
   height: 100px;
+  margin: auto;
 }
 
 .work-process .title__description h2,
@@ -498,7 +508,6 @@ ul {
   box-shadow: 10px 10px 0px rgb(255 255 255 / 10%);
   transition: all 250ms ease-out;
   margin: 10px;
-  padding: 10px;
 }
 
 .work-process__item:hover {
@@ -734,7 +743,7 @@ li.cancel {
   align-items: center;
   width: 100%;
   text-align: center;
-  padding: 100px 0;
+  padding: 140px 0;
 }
 
 .blog-entries .title__description {
@@ -804,7 +813,7 @@ li.cancel {
 .contact-us {
   background-color: var(--purple-section);
   width: 100%;
-  padding: 150px 0 150px 0;
+  padding: 140px 0;
 }
 
 .contact-us .title__description {
@@ -1038,6 +1047,10 @@ footer p {
     margin: 50px 0 0 0;
   }
 
+  .work-process .title__description {
+    width: 80%;
+  }
+
   .testimonial__card {
     width: 100%;
   }
@@ -1060,7 +1073,6 @@ footer p {
 
   .count {
     width: 100%;
-    padding: 30px;
   }
 
   .entry {
@@ -1072,7 +1084,7 @@ footer p {
   }
 
   .contact-box .description {
-    width: 100%;
+    width: 90%;
     padding: 0 30px;
     margin: 30px 0;
   }
@@ -1125,8 +1137,12 @@ footer p {
     margin: 50px 0 0 0;
   }
 
+  .work-process .title__description {
+    width: 50%;
+  }
+
   .count {
-    width: 40%;
+    width: 44%;
     padding: 30px;
   }
 
@@ -1212,6 +1228,15 @@ footer p {
     margin-left: 27%;
     margin-top: 0;
   }
+
+  .work-process__item {
+    width: 130px;
+  }
+
+  .pricing-table {
+    width: 250px;
+    margin: 10px;
+  }
 }
 /* 992px ~ 1199px */
 
@@ -1230,17 +1255,8 @@ footer p {
     height: 350px;
   }
 
-  .pricing-table-box {
-    max-width: 1200px;
-  }
-
-  .pricing-table {
-    width: 300px;
-    margin: 10px;
-  }
-
-  .pricing-table {
-    width: 300px;
+  .work-process__item {
+    width: inherit;
   }
 
   .counting img {
@@ -1248,8 +1264,8 @@ footer p {
   }
 
   .count {
-    width: 30px;
-    margin: 130px auto;
+    width: 80px;
+    padding: 130px 30px;
   }
 }
 /* 1200px~ */

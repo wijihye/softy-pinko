@@ -11,10 +11,12 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="activeNav.js"></script>
+    <script defer src="loadDoc.js"></script>
   </head>
   <body>
     <!-- Preloader -->
-    <div class="loader"></div>
+  <div class="loader"></div>
+
     <!-- Nav -->
     <nav id="navbar" class="nav">
       <a href="#" class="logo">
@@ -29,15 +31,15 @@
         </label>
       </div>
       <ul class="nav__content">
-        <li><a href="#Home" class="nav__item selected">Home</a></li>
-        <li><a href="#About" class="nav__item">About</a></li>
-        <li><a href="#Work Process" class="nav__item">Work Process</a></li>
-        <li><a href="#Testimonials" class="nav__item">Testimonials</a></li>
+        <li><a href="#Home" data-link="#home" class="nav__item selected">Home</a></li>
+        <li><a href="#About" data-link="#about" class="nav__item">About</a></li>
+        <li><a href="#Work Process" data-link="#work-process" class="nav__item">Work Process</a></li>
+        <li><a href="#Testimonials" data-link="#testimonials" class="nav__item">Testimonials</a></li>
         <li>
-          <a href="#Princing Tables" class="nav__item">Princing Tables</a>
+          <a href="#Princing Tables" data-link="#pricing-tables" class="nav__item">Princing Tables</a>
         </li>
-        <li><a href="#Blog Entries" class="nav__item">Blog Entries</a></li>
-        <li><a href="#Contact Us" class="nav__item">Contact Us</a></li>
+        <li><a href="#Blog Entries" data-link="#blog-entries" class="nav__item">Blog Entries</a></li>
+        <li><a href="#Contact Us" data-link="#contact-us" class="nav__item">Contact Us</a></li>
       </ul>
       
       
@@ -46,7 +48,7 @@
     
 
     <!-- Home - title -->
-    <section class="home__title">
+    <section id="home" class="home__title">
       <div class="home__title__content">
         <h1>
           We provide the best
@@ -92,7 +94,7 @@
     </section>
 
     <!-- About -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="container">
         <div class="about-discuss">
           <img
@@ -127,7 +129,7 @@
     </section>
 
     <!-- Work Process -->
-    <section class="work-process">
+    <section id="work-process" class="work-process">
       <div class="container">
       <div class="title__description">
         <h2>Work process</h2>
@@ -229,7 +231,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
       <div class="container">
         <div class="title__description">
           <h2>What do they say?</h2>
@@ -286,7 +288,7 @@
     </section>
 
     <!-- Pricing Tables -->
-    <section class="pricing-tables">
+    <section id="pricing-tables" class="pricing-tables">
       <div class="container">
         <div class="title__description">
           <h2>Pricing Plans</h2>
@@ -372,7 +374,7 @@
     </section>
 
     <!-- Blog Entries -->
-    <section class="blog-entries">
+    <section id="blog-entries" class="blog-entries">
       <div class="title__description">
         <h2>Blog Entries</h2>
         <p>
@@ -426,7 +428,7 @@
     </section>
 
     <!-- Contact us -->
-    <section class="contact-us">
+    <section id="contact-us" class="contact-us">
       <div class="title__description">
         <h2>Talk To Us</h2>
         <p>
