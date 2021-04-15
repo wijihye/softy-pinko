@@ -10,7 +10,7 @@ let timeId = null;
 
 window.addEventListener('load', () => {
   // window가 load되면 발생하는 이벤트
-  loader.animate([{ opacity: '1' }, { opacity: '0' }], {
+  loader.animate([{ opacity: 1 }, { opacity: 0 }], {
     duration: 1000,
     easing: 'ease-out',
   });
@@ -19,59 +19,32 @@ window.addEventListener('load', () => {
 
   setTimeout(() => {
     loader.style.visibility = 'hidden';
-    homeContents[0].animate(
-      [
-        {
-          opacity: 0,
-          transform: 'translateX(-50px)',
-        },
-        {
-          opacity: 1,
-          transform: 'translateX(0px)',
-        },
-      ],
-      {
-        duration: 1500,
-        easing: 'ease-out',
-      }
-    );
 
-    homeContents[1].animate(
-      [
+    function homeContentAnimate(idx, dur) {
+      homeContents[idx].animate(
+        [
+          {
+            opacity: 0,
+            transform: 'translateY(70px)',
+          },
+          {
+            opacity: 1,
+            transform: 'translateY(0px)',
+          },
+        ],
         {
-          opacity: 0,
-          transform: 'translateX(-150px)',
-        },
-        {
-          opacity: 1,
-          transform: 'translateX(0px)',
-        },
-      ],
-      {
-        duration: 1500,
-        easing: 'ease-out',
-      }
-    );
+          duration: dur,
+          easing: 'ease-out',
+        }
+      );
+    }
 
-    homeContents[2].animate(
-      [
-        {
-          opacity: 0,
-          transform: 'translateX(-250px)',
-        },
-        {
-          opacity: 1,
-          transform: 'translateX(0px)',
-        },
-      ],
-      {
-        duration: 1500,
-        easing: 'ease-out',
-      }
-    );
+    homeContentAnimate(0, 500);
+    homeContentAnimate(1, 800);
+    homeContentAnimate(2, 1100);
   }, 990);
   // 1초 후에(animate)가 모두 끝난 후에 visibility를
   // hidden으로 변경 -> 한 번만 실행하고 없애기 위함.
   // 그리고 homeContents에 개별 animate를 줌.
-  // (어떻게 하나로 줄이지)
+  // (어떻게 하나로 줄이지) -> 함수 선언해서 줄였다.
 });

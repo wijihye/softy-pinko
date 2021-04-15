@@ -390,7 +390,12 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
 .about {
   position: relative;
   margin-top: 40px;
+  padding-top: 100px;
   width: 100%;
+}
+
+.about .container {
+  padding-top: 0;
 }
 
 .about-discuss {
@@ -401,14 +406,6 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
 .about-business {
   display: flex;
   padding: 80px 0;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.about-discuss img,
-.about-business img {
-  width: 350px;
-  height: 350px;
 }
 
 .about .title__description {
@@ -541,7 +538,7 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
 .testimonial__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 20px auto;
 }
 
@@ -550,7 +547,6 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 350px;
   padding: 20px 0 20px 0;
   margin: 10px;
   border-radius: 15px;
@@ -1052,8 +1048,9 @@ footer p {
     width: 80%;
   }
 
-  .testimonial__card {
-    width: 100%;
+  .card_cover {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .testimonials .title__description {
@@ -1101,10 +1098,6 @@ footer p {
     max-width: 33.3333%;
     margin: 30px 3rem;
     margin-right: auto;
-  }
-
-  .testimonial__card {
-    width: 350px;
   }
 
   .testimonials .title__description {
@@ -1221,13 +1214,22 @@ footer p {
   }
 
   .about .title__description:nth-child(odd) {
-    margin-right: 27%;
+    margin-right: 15%;
     margin-bottom: 0;
   }
 
   .about .title__description:nth-child(even) {
-    margin-left: 27%;
+    margin-left: 15%;
     margin-top: 0;
+  }
+
+  .card_cover {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+
+  .testimonial__card {
+    max-width: 350px;
   }
 
   .work-process__item {
@@ -1235,7 +1237,7 @@ footer p {
   }
 
   .pricing-table {
-    width: 250px;
+    width: 225px;
     margin: 10px;
   }
 }
@@ -1252,12 +1254,16 @@ footer p {
 
   .about-discuss img,
   .about-business img {
-    width: 350px;
-    height: 350px;
+    width: 280px;
+    height: 280px;
   }
 
   .work-process__item {
     width: inherit;
+  }
+
+  .pricing-table {
+    width: 250px;
   }
 
   .counting img {
