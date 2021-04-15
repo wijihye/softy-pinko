@@ -623,7 +623,6 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
 .pricing-table-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 0 auto;
 }
 
@@ -632,7 +631,6 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
   margin: 10px;
   padding: 30px;
   border-radius: 17px;
@@ -669,11 +667,11 @@ li.cancel {
   color: var(--white-background);
 }
 
-.pricing-table:nth-child(even) .monthly-box {
+.pricing_cover:nth-child(even) .pricing-table .monthly-box {
   background-color: var(--pink-background);
 }
 
-.pricing-table:nth-child(odd) .monthly-box {
+.pricing_cover:nth-child(odd) .pricing-table .monthly-box {
   background-color: var(--purple-background);
 }
 
@@ -1049,7 +1047,8 @@ footer p {
     width: 80%;
   }
 
-  .card_cover {
+  .card_cover,
+  .pricing_cover {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1060,10 +1059,6 @@ footer p {
 
   .testimonial__person {
     margin-right: 10%;
-  }
-
-  .pricing-table {
-    width: 100%;
   }
 
   .counting img {
@@ -1134,6 +1129,12 @@ footer p {
 
   .work-process .title__description {
     width: 50%;
+  }
+
+  .card_cover,
+  .pricing_cover {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .count {
@@ -1225,6 +1226,11 @@ footer p {
   }
 
   .card_cover {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+
+  .pricing_cover {
     flex: 0 0 33.33%;
     max-width: 33.33%;
   }
