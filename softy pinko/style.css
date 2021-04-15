@@ -408,6 +408,11 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
   padding: 80px 0;
 }
 
+.about img {
+  opacity: 0;
+  margin: 0 auto;
+}
+
 .about .title__description {
   width: 50%;
 }
@@ -633,6 +638,7 @@ section:not(.contact-us, .home__title, .home__description, #about, .blog-entries
   border-radius: 17px;
   box-shadow: 0 0 50px rgb(0 0 0 / 10%);
   background-color: var(--white-background);
+  opacity: 0;
 }
 
 .pricing-table h2 {
@@ -1025,11 +1031,6 @@ footer p {
   .about-discuss,
   .about-business {
     flex-flow: column;
-  }
-
-  .about img {
-    opacity: 0;
-    margin: 0 auto;
   }
 
   .about .title__description {

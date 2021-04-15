@@ -49,6 +49,7 @@ function pricingTables(entries, observer) {
         easing: 'ease-out',
       }
     );
+    entries[idx].target.style.opacity = 1;
   }
 
   if (entries[0].isIntersecting) {
