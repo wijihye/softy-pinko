@@ -1,6 +1,5 @@
-
-
-# 1. 프로젝트 이름 및 설명
+# 1. 프로젝트 이름, 미리보기 페이지 및 설명
+- <https://wijihye.github.io/softy-pinko/>
 - Softy Pinko.
 - 21.03 ~ 21.04
 - Google에서 무료 Responsive web 시안을 받아와 작업함.
